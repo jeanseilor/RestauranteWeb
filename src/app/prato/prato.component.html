@@ -1,0 +1,24 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+      <h2>Pratos</h2>
+      <a routerLink="/prato/save" class="btn btn-success">Novo</a>
+      <table class="table table-striped table-hover">
+        <thead>
+          <tr>
+            <th>Id</th>
+            <th>Descricao</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of pratos" [routerLink]="['/prato/save', item.id]">
+            
+            <td>{{ item.id }}</td>
+            <td>{{ item.descricao }}</td>
+          </tr>
+        </tbody>
+
+      </table>
+    </div> 
+  </div>
+</div>
