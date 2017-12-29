@@ -1,3 +1,4 @@
+import { HomeModule } from './home/home.module';
 import { RestauranteService } from './restaurante.service';
 import { PratoModule } from './prato/prato.module';
 import { BrowserModule } from '@angular/platform-browser';
@@ -13,13 +14,15 @@ import { RestauranteComponent } from './restaurante/restaurante.component';
 import { ApiServiceRestaurante } from './api.service-restaurante';
 import { RestauranteModule } from './restaurante/restaurante.module';
 import { RestauranteDetalheComponent } from './restaurante-detalhe/restaurante-detalhe.component';
+import { HomeComponent } from './home/home.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     PratoDetalheComponent,
-    RestauranteDetalheComponent
+    RestauranteDetalheComponent,
+   
   ],
   imports: [
     BrowserModule,
@@ -27,7 +30,8 @@ import { RestauranteDetalheComponent } from './restaurante-detalhe/restaurante-d
     RestauranteModule,
     PratoModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HomeModule
   ],
   providers: [PratoService, ApiService, ApiServiceRestaurante, RestauranteService],
   bootstrap: [AppComponent]

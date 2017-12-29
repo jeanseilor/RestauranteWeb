@@ -29,6 +29,10 @@ export class RestauranteService {
   getAllTodos(): Observable<RestauranteModule[]> {
     return this.api.getAllTodos();
   }
+  getAllByDescricao(descricao:string): Observable<RestauranteModule[]> {
+    return this.api.getAllByDescricao(descricao);
+  }
+
 
   // Simulate GET /todos/:id
   getTodoById(todoId: number): Observable<RestauranteModule> {

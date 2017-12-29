@@ -1,3 +1,4 @@
+import { RestauranteModule } from './../restaurante/restaurante.module';
 import { NgModule, Optional } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
@@ -18,6 +19,8 @@ export class PratoModule {
   id: number;
   descricao :string;
   preco : number;
+  restauranteId :number;
+  restaurante : RestauranteModule;
 
   constructor( ) {
     

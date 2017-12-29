@@ -13,7 +13,7 @@ import { environment } from '../environments/environment.prod';
 const API_URL = environment.apiUrl; 
 @Injectable()
 export class ApiServiceRestaurante {
-
+  
   constructor(private http: Http) {
   }
 
@@ -32,6 +32,19 @@ export class ApiServiceRestaurante {
     })
     .catch(this.handleError);
   }
+
+  public getAllByDescricao(descricao:string): Observable<RestauranteModule[]>  {
+    // will use this.http.get()
+    return this.http
+    .get(API_URL + '/Restaurantes/GetRestarantesLike/'+descricao)
+    .map(response => {
+      const pratos = response.json();
+      return response.json();
+    })
+    .catch(this.handleError);
+  }
+
+
 
   private extractData(res: Response) {
     console.log("Erro!")

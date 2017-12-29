@@ -1,13 +1,13 @@
+
 import { Restaurante } from './../restaurante/restaurante.model';
-
-
 import { RestauranteModule } from './../restaurante/restaurante.module';
 import { RestauranteComponent } from './../restaurante/restaurante.component';
 import { Component, OnInit } from '@angular/core';
 import { RestauranteService } from '../restaurante.service';
-import { ActivatedRoute, Params } from '@angular/router';
+import { ActivatedRoute, Params,Router } from '@angular/router';
 
 import { Location } from '@angular/common'
+
 
 
 
@@ -22,7 +22,8 @@ export class RestauranteDetalheComponent implements OnInit {
   constructor(
     private api: RestauranteService,
     private route: ActivatedRoute,
-    private location: Location
+    private location: Location,
+    private router: Router,
   ) { }
 
   ngOnInit() {
@@ -44,11 +45,23 @@ export class RestauranteDetalheComponent implements OnInit {
 
   onSubmit(): void{
     console.log(this.restaurante)
-    this.api.addTodo(this.restaurante).subscribe((prato) => {
-      console.log(this.restaurante);
-      }
-    );
+    if(!this.restaurante.id){
+      this.api.addTodo(this.restaurante).subscribe((prato) => {
+        console.log(this.restaurante);
+        }
+      );
 
+    }else{
+      this.api.toggleTodoComplete(this.restaurante).subscribe((prato) => {
+        console.log(this.restaurante);
+        }
+      );
+    }
+    
+    
+
+    this.router.navigateByUrl('/restaurante');
+    this.router.navigate(["restaurante"]);
   }
 
 }

@@ -17,12 +17,22 @@ export class PratoComponent implements OnInit {
   ) { }
   
   ngOnInit() {
+    this.getPratos();
+  }
+
+  getPratos() :void{
     this.pratoService
     .getAllTodos().subscribe((pratos) => {
-        this.pratos = pratos;
+        console.log(this.pratos = pratos);
        
       }
     );
   }
 
+  deletar(id:number){
+    this.pratoService.deleteTodoById(id).subscribe((prato) => {
+      this.getPratos();
+      }
+    );
+  }
 }
