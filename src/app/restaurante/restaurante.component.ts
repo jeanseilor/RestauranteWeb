@@ -39,9 +39,13 @@ export class RestauranteComponent implements OnInit {
   deletar(id:number){
     this.api.deleteTodoById(id).subscribe((prato) => {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> teste dois
+=======
+
+>>>>>>> 06ab11514880becd84260178397b6273053c4c9f
       
      this.getRestaurantes();
       }
