@@ -25,7 +25,11 @@ export class RestauranteComponent implements OnInit {
   getRestaurantes(): void{
     this.api
     .getAllTodos().subscribe((restaurantes) => {
+
+
         this.restaurantes = restaurantes;
+
+
         console.log(this.restaurantes);
       }
     );
@@ -34,6 +38,7 @@ export class RestauranteComponent implements OnInit {
   
   deletar(id:number){
     this.api.deleteTodoById(id).subscribe((prato) => {
+      
      this.getRestaurantes();
       }
     );

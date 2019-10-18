@@ -10,7 +10,11 @@
              
               <button  class="btn btn-successes"  [disabled]="!contatoForm.form.valid" >Buscar restaurante</button> 
           </div>
+
             <div class="form-group">
+
+
+
 
                 <input type="text" class="form-control" name="descricao" [(ngModel)]="descricao" placeholder="Favor informa o nome do restaurante" required/>
             </div>
@@ -20,6 +24,8 @@
 
       <table class="table table-striped table-hover">
         <thead>
+
+
           <tr>
             <th></th>
         
@@ -29,11 +35,18 @@
         </thead>
         <tbody>
           <tr *ngFor="let item of restaurantes">
+
+
             <th> <a class="btn btn-secondary"  [routerLink]="['/restaurante/save', item.id]" >Editar</a>
+
+
               <a class="btn btn-secondary"  (click)="deletar(item.id)" >Deletar</a>
             </th>
             
             <td>{{ item.id }}</td>
+
+
+            
             <td>{{ item.descricao }}</td>
           </tr>
         </tbody>

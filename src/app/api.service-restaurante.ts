@@ -28,6 +28,9 @@ export class ApiServiceRestaurante {
     .get(API_URL + '/Restaurantes')
     .map(response => {
       const pratos = response.json();
+
+
+      
       return response.json();
     })
     .catch(this.handleError);

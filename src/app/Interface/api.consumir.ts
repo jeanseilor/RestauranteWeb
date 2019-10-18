@@ -9,5 +9,7 @@ export interface ApiConsumir<Object>{
 
     updateTodo(todo: Object,  id: number): Observable<Object>
 
+
+    
     deleteTodoById(todoId: number) : Observable<null>
 }
