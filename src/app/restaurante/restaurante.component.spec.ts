@@ -8,14 +8,24 @@ describe('RestauranteComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+
+
       declarations: [ RestauranteComponent ]
     })
+
     .compileComponents();
   }));
 
   beforeEach(() => {
+
+
+
     fixture = TestBed.createComponent(RestauranteComponent);
+
+
     component = fixture.componentInstance;
+
+    
     fixture.detectChanges();
   });
 
