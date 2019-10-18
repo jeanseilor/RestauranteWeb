@@ -16,6 +16,8 @@ import { RestauranteRoutingModule } from './app-routing.module';
 })
 export class RestauranteModule { 
    id: number;
+
+   
    descricao :string;
   
   constructor( ) {

@@ -6,8 +6,14 @@
       <a routerLink="/restaurante/save" class="btn btn-success">Novo</a>
       </div>
       <form (ngSubmit)="onSubmit()" #contatoForm="ngForm">
+
+
+        
           <div class="form-group">
              
+
+
+
               <button  class="btn btn-successes"  [disabled]="!contatoForm.form.valid" >Buscar restaurante</button> 
           </div>
 
@@ -19,6 +25,9 @@
                 <input type="text" class="form-control" name="descricao" [(ngModel)]="descricao" placeholder="Favor informa o nome do restaurante" required/>
             </div>
             
+
+
+
       </form>
     
 

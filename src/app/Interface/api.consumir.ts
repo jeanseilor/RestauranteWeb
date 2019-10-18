@@ -1,6 +1,8 @@
 import { Observable } from 'rxjs/Observable';
 export interface ApiConsumir<Object>{
 
+
+    
     getAllTodos() : Observable<Object>[]
 
     createTodo(todo: Object): Observable<Object> 

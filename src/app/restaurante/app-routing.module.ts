@@ -10,6 +10,8 @@ const routes: Routes = [
         path: 'restaurante',
         component: RestauranteComponent
     },  
+
+    
     {
         path: 'restaurante/save',
         component: RestauranteDetalheComponent
